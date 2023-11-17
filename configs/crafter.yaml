@@ -1,0 +1,101 @@
+# https://github.com/openai/gym
+
+environment:
+  type: "Crafter"
+  frame_skip: 1
+  last_action_to_obs: True
+  last_reward_to_obs: True
+  last_expert_reward_to_obs: True
+  current_expert_distr_to_obs: False
+  obs_stacks: 1
+  reset_params:
+    start-seed: 0
+    num-seeds: 100000
+    vis_observation: True
+    env_rewards: True # Enable or disable the reward system of the environment
+  buffered_env: 
+    buffer_size: 15
+    n_processes: 3
+
+expert:
+  env_type: "Crafter"
+  model: "DreamerV3"
+  config_path: "./model/expert/crafter/config.yaml"
+  model_path: "./model/expert/crafter/checkpoint.ckpt"
+  reward_type: "jsd" # "jsd",  "probs, "best_action", "histogramm"
+  reward_schedule:
+    initial: 0.01
+    final: 0.01
+    power: 2.0
+    max_decay_steps: 4000
+    bonus: True
+  device: "cuda"
+  test: False # If True, the expert will be used for sampling (debugging purposes)
+
+model:
+  load_model: False
+  model_path: "./checkpoints/crafter/20210722-103713_2/crafter-199.pt"
+  checkpoint_interval: 25
+  activation: "relu"
+  vis_encoder: "cnn"
+  vec_encoder: "linear"
+  num_vec_encoder_units: 128
+  hidden_layer: "default"
+  num_hidden_layers: 1
+  num_hidden_units: 512
+  recurrence:
+    layer_type: "gru"
+    num_layers: 1
+    sequence_length: 16
+    hidden_state_size: 128
+    hidden_state_init: "zero"
+    reset_hidden_state: False
+    residual: False
+  value_head: "multi" # "default" means one value head is used, "multi" means multiple value heads are used for each reward type
+
+evaluation:
+  evaluate: False
+  n_workers: 3
+  seeds:
+    start-seed: 100000
+    num-seeds: 10
+  interval: 50
+
+sampler:
+  n_workers: 16
+  worker_steps: 256
+
+trainer:
+  algorithm: "PPO"
+  resume_at: 0
+  gamma: 0.99
+  lamda: 0.95
+  expert_gamma: 0.00
+  expert_lamda: 0.95
+  updates: 4000
+  epochs: 4
+  refresh_buffer_epoch: -1
+  n_mini_batches: 4
+  value_coefficient: 0.25
+  max_grad_norm: 0.5
+  share_parameters: True
+  learning_rate_schedule:
+    initial: 1.0e-4
+    final: 1.0e-4
+    power: 1.0
+    max_decay_steps: 4000
+  beta_schedule:
+    initial: 0.0
+    final: 0.00
+    power: 1.0
+    max_decay_steps: 4000
+  clip_range_schedule:
+    initial: 0.2
+    final: 0.2
+    power: 1.0
+    max_decay_steps: 4000
+  kl_coefficient_schedule:
+    initial: 0.1
+    final: 0.1
+    power: 1.0
+    max_decay_steps: 4000
