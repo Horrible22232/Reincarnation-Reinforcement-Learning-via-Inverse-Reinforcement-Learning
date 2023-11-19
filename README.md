@@ -28,7 +28,6 @@ This project is licensed under the [MIT License](/LICENSE.md) - see the LICENSE.
 
 ## Acknowledgements
 Special thanks to the advisors and peers who supported this research.
-This README format provides a clear summary of the thesis, its methodologies, and results, making it suitable for a GitHub repository. Remember to add actual links to the `CONTRIBUTING.md` and `LICENSE.md` files if they exist in the repository.
 
 
 Based on: https://github.com/MarcoMeter/neroRL
