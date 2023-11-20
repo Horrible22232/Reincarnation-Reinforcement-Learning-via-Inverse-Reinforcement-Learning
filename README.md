@@ -1,7 +1,7 @@
 ﻿# Reincarnation-Reinforcement-Learning-via-Inverse-Reinforcement-Learning (WIP)
 
 ## Overview
-This Master's thesis evaluates the concept of Reincarnation Reinforcement Learning (RRL) via Inverse Reinforcement Learning (IRL) in a Crafter environment. A significant challenge in Reinforcement Learning (RL) is the computational intensity and lengthy nature of the learning process due to the "Tabula Rasa" approach, where the agent operates without prior knowledge. This issue is largely due to the exploration problem that existing RL algorithms cannot independently resolve.
+This project explores the application of Reincarnation Reinforcement Learning (RRL) through Inverse Reinforcement Learning (IRL) within a Crafter environment. Reinforcement Learning (RL) often faces challenges with computational intensity and extended training durations, primarily due to the "Tabula Rasa" approach where agents operate without prior knowledge. This complication is primarily linked to the exploration problem, a challenge not yet fully addressed by existing RL algorithms.
 
 ## Reincarnation Reinforcement Learning
 RRL aims to mitigate the inefficiencies and high costs of training where the agent starts from scratch each time. It integrates information gathered from previous training iterations using a trained expert.
