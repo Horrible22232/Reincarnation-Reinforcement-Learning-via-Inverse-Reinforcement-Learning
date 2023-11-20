@@ -29,5 +29,14 @@ This project is licensed under the [MIT License](/LICENSE.md) - see the LICENSE.
 ## Acknowledgements
 Special thanks to the advisors and peers who supported this research.
 
+## References
+This work builds upon and extends several key projects and frameworks in the field:
 
-Based on: https://github.com/MarcoMeter/neroRL
+1. **neroRL:** A PyTorch-based research framework specializing in Memory-based Deep Reinforcement Learning. [GitHub - neroRL](https://github.com/MarcoMeter/neroRL)
+   - Reference: Matthias Pallasch, Marco Pleines.
+   
+2. **Mastering Diverse Domains through World Models (DreamerV3):** A significant work in the area of RL with world models. [GitHub - DreamerV3](https://github.com/danijar/dreamerv3)
+   - Citation: Hafner, D., Pasukonis, J., Ba, J., & Lillicrap, T. (2023). *Mastering Diverse Domains through World Models.* arXiv preprint arXiv:2301.04104.
+
+3. **Crafter:** A benchmark for assessing a spectrum of agent capabilities. [GitHub - Crafter](https://github.com/danijar/crafter)
+   - Citation: Hafner, D. (2021). *Benchmarking the Spectrum of Agent Capabilities.* arXiv preprint arXiv:2109.06780.
