@@ -33,7 +33,7 @@ Special thanks to the advisors and peers who supported this research.
 This work builds upon and extends several key projects and frameworks in the field:
 
 1. **NeroRL:** A PyTorch-based research framework specializing in Memory-based Deep Reinforcement Learning. [GitHub - neroRL](https://github.com/MarcoMeter/neroRL)
-   - Reference: Marco Pleines and Matthias Palalsch.
+   - Reference: Marco Pleines and Matthias Pallasch.
    
 2. **Mastering Diverse Domains through World Models (DreamerV3):** A state-of-the-art, general, and scalable algorithm that leverages world models to achieve superior performance across a broad spectrum of domains . [GitHub - DreamerV3](https://github.com/danijar/dreamerv3)
    - Citation: Hafner, D., Pasukonis, J., Ba, J., & Lillicrap, T. (2023). *Mastering Diverse Domains through World Models.* arXiv preprint arXiv:2301.04104.
