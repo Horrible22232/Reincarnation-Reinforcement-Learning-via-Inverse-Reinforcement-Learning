@@ -1,4 +1,4 @@
-﻿# Reincarnation-Reinforcement-Learning-via-Inverse-Reinforcement-Learning (WIP)
+﻿# Reincarnation Reinforcement Learning via Inverse Reinforcement Learning (WIP)
 
 ## Overview
 This project explores the application of Reincarnation Reinforcement Learning (RRL) via Inverse Reinforcement Learning (IRL) in a Crafter environment. A significant challenge in Reinforcement Learning (RL) is the computational intensity and lengthy nature of the learning process due to the "Tabula Rasa" approach, where the agent operates without prior knowledge. This issue is largely due to the exploration problem that existing RL algorithms cannot independently resolve.
